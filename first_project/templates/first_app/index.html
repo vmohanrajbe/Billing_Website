@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to First App Project</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mystyle.css' %}">
+  </head>
+  <body>
+    <h1>First App Project</h1>
+    {% if var1 %}
+    <table border="2px solid black;">
+      <thead>
+        <th>Site Name</th>
+        <th>Date Accessed</th>
+      </thead>
+      {% for a in var1 %}
+      <tr>
+        <td> {{ a.name }} </td>
+        <td> {{ a.date }} </td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% endif %}
+  </body>
+</html>
